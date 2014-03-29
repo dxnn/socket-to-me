@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Socket to me</title>
+	
+	<meta name="description" content="Socket to me">
+	<meta name="author" content="dann toliver">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+	
+	<link rel="stylesheet" href="../core/deck.core.css">
+	<link rel="stylesheet" href="../themes/style/swiss.css">
+	
+	<script src="../modernizr.custom.js"></script>
+	
+	<style>
+    .deck-container .slide li {
+      font-size:0.5em;
+      list-style-type: none;
+      text-align: left;
+    }
+    .deck-container .slide h1 {
+      font-size:3em;
+      color: white;
+    }
+    .deck-container .slide h2 {
+      color: #3cb93c;
+    }
+    .deck-container .slide h3 {
+      font-size:1.5em;
+      color: #333;
+    }
+    .deck-container .slide pre {
+      color: #fff;
+      border: none;
+    }    
+    .deck-container .slide code {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translate(0, -50%);
+    }
+    
+    body.deck-container {
+      padding: 0px 0px;
+    }
+    .blue {
+      background-color: #69f;
+    }
+    .teal {
+      background-color: #00A383;
+    }
+    .green {
+      background-color: #82B22C;
+    }
+    .red {
+      background-color: #E73A95;
+    }
+    .orange {
+      background-color: #FF7800;
+    }
+    /*
+    
+    Primary Color:
+    34D800	46A229	228D00	65EC3B	89EC6A
+    Secondary Color A:
+    00A383	1F7A68	006A55	34D1B2	5ED1BA
+    Secondary Color B:
+    FF6400	BF6830	A64100	FF8B40	FFAA73
+    Complementary Color:
+    F30021	B62E40	9E0016	F93E58	F97083
+    */
+	</style>
+</head>
+
+<body class="deck-container">
+
+<!-- Begin slides -->
+<section class="slide blue" id="title-slide" >
+  <h1><p>
+    Socket to me
+  </p></h1>
+</section>
+
+<section class="slide teal" id="motivation">
+  <h1><p>
+    What is a web socket
+  </p></h1>
+</section>
+
+<section class="slide orange" id="motivation">
+  <h1><p>
+    Why would we want that
+  </p></h1>
+</section>
+
+<section class="slide red" id="new-lang">
+  <h1><p>
+    Those are all just words tell us why
+  </p></h1>
+</section>
+
+<section class="slide green" id="we-need">
+  <h1>
+    <ul>
+      <li>Loading an application</li>
+      <li>Telling the server something</li>
+      <li>Asking the server a question</li>
+      <li>Getting a notice from the server</li>
+      <li>Sending a message to another client</li>
+      <li>Sending a message to lots of other clients</li>
+    </ul>
+  </h1>
+</section>
+
+<section class="slide teal" id="we-need">
+  <h1>
+    <img src="cool.png">
+  </h1>
+</section>
+
+<section class="slide blue" id="we-need">
+  <h1>
+    <ul>
+      <li>Loading an application [HTTP]</li>
+      <li>Telling the server something [XHR]</li>
+      <li>Asking the server a question [XHR]</li>
+      <li>Getting a notice from the server [WS, SSE]</li>
+      <li>Having a conversation with the server [WS]</li>
+      <li>Sending a message to another client [WS, RTC]</li>
+      <li>Conversations between lots of clients [WS, RTC]</li>
+    </ul>
+  </h1>
+</section>
+
+<section class="slide orange" id="new-lang">
+  <h1>
+    <p>Speed</p>
+    <p>Size</p>
+    <p>State</p>
+  </h1>
+</section>
+
+<section class="slide blue" id="we-need">
+  <h1>
+    WebSockets are good
+    <ul>
+      <li>Single TCP socket</li>
+      <li>No header overhead</li>
+      <li>Good browser support</li>
+      <li>Good subprotocols</li>
+    </ul>
+  </h1>
+</section>
+
+<section class="slide teal" id="we-need">
+  <h1>
+    WebSocket SubProtocols
+    <ul>
+      <li>WAMP</li>
+      <li>STOMP</li>
+      <li>NoChan</li>
+      <li>OCPP</li>
+      <li>MBWS</li>
+      <li>RFB</li>
+      <li>WPCP</li>
+    </ul>
+  </h1>
+</section>
+
+<section class="slide green" id="new-lang">
+  <h1><p>
+    Okay, but why Socket.IO?
+  </p></h1>
+</section>
+
+<section class="slide orange" id="we-need">
+  <h1>
+    <ul>
+      <li>Fallback for ignorant browsers</li>
+      <li>No native WS support in Node.js</li>
+      <li>Node to Node</li>
+      <li>Easy broadcast</li>
+      <li>Volatile messages</li>
+      <li>Disconnect / reconnect</li>
+      <li>Heartbeats and timeouts</li>
+      <li>Callback acknowledgements</li>
+      <li>Namespacing for multiplexing</li>
+    </ul>
+  </h1>
+</section>
+
+<section class="slide blue" id="we-need">
+  <h1>
+    Server support
+    <ul>
+      <li>Node.js</li>
+      <li>Haskell</li>
+      <li>Erlang</li>
+      <li>Scala</li>
+      <li>Ruby</li>
+      <li>Lua</li>
+      <li>Go</li>
+      <li>C</li>
+    </ul>
+  </h1>
+</section>
+
+<section class="slide red" id="we-need">
+  <h1>
+    There are other libs
+    <ul>
+      <li>sockjs -- no flash, just ws</li>
+      <li>primus -- wrapper over libs</li>
+      <li>engine -- socket.io uses it</li>
+      <li>pusher -- hosted service</li>
+    </ul>
+  </h1>
+</section>
+
+<section class="slide teal" id="new-lang">
+  <h1><p>
+    But Socket.IO is easy
+  </p></h1>
+</section>
+
+<section class="slide blue" id="new-lang">
+  <h1><p>
+    ok we love it 
+  </p><p>
+    now show us some code
+  </p></h1>
+</section>
+
+
+
+
+<section class="slide blue" id="edit-ints">
+<code><pre>
+var io = require('socket.io').listen(80);
+
+io.sockets.on('connection', function (socket) {
+  socket.emit('news', { hello: 'world' });
+  
+  socket.on('my other event', function (data) {
+    console.log(data);
+  });
+});
+</pre></code>
+</section>
+
+<section class="slide blue" id="extens-fun">
+<code><pre>  
+&lt;script src=&quot;/socket.io/socket.io.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+  var socket = io.connect(&#x27;http://localhost&#x27;);
+  
+  socket.on(&#x27;news&#x27;, function (data) {
+    console.log(data);
+    socket.emit(&#x27;my other event&#x27;, { my: &#x27;data&#x27; });
+  });
+&lt;/script&gt;
+</pre></code>
+</section>
+
+
+<section class="slide teal" id="new-lang">
+  <h1><p>
+    no we want the other codes
+  </p></h1>
+</section>
+
+
+
+<section class="slide green" id="express-inter">
+  <h1>
+    The Future
+    <p></p>
+    <ul>
+      <li>Socket.IO 1.0 is coming</li>
+      <li>Real-time all the things</li>
+      <li>Universal WebSocket support</li>
+      <li></li>
+    </ul>
+  </h1>
+</section>
+
+
+
+
+<section class="slide blue" id="finally">
+  <h1 style="font-size:1em;">
+    <p>
+      @dann
+    </p>
+    <p>
+      dxnn @ github
+    </p>
+    <p>
+      dann @ bentobox . net
+    </p>
+  </h1>
+</section>
+
+
+
+<script src="../jquery-1.7.2.min.js"></script>
+
+<!-- Deck Core and extensions -->
+<script src="../core/deck.core.js"></script>
+<script src="../extensions/hash/deck.hash.js"></script>
+
+<!-- Initialize the deck -->
+<script>
+$(function() {
+	$.deck('.slide');
+});
+</script>
+
+</body>
+</html>
