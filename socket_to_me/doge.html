@@ -1,27 +1,49 @@
 <html><head><style>body {font: 400 3em "Comic Sans MS"}</style></head><body>
 
-<img src="http://sherpa.local/~dann/talks/socket_to_me/doge.png">
+<img id="image" src="http://sherpa.local/~dann/talks/socket_to_me/doge.png">
 <a href="" id="buy">Buy</a>
 <a href="" id="sell">Sell</a>
 
-<p>You have <span id="doges">100</span> Doge</p>
-<p>1 Doge is <span id="wows">1</span> Wow</p>
+<p>You have <span id="doge">0</span> Doge</p>
+<p>You have <span id="wows">100</span> Wow</p>
+<p>1000 Doge is <span id="rate">1000</span> Wow</p>
 
 <script src="/socket.io/socket.io.js"></script>
 <script>
-  var socket = io.connect('http://localhost')
+  // much logic   very game   so sockets   wow
 
-  socket.on('bounced', function (data) {
+  var socket = io.connect('http://localhost')
+  var doge = 0, wows = 100, rate = 1000
+  var $ = document.getElementById.bind(document)
+
+  function update_dom() {
+    $('rate').textContent = rate
+    $('wows').textContent = wows
+    $('doge').textContent = doge
+  }
+
+  socket.on('newrate', function (newrate) {
     // post a new canvas thing
-    
-    
-    // function(e) { socket.emit('bounce', {x: e.x, y: e.y, hue: hue}) }
+    rate = newrate
+    update_dom()
   })
   
   document.getElementById('buy').addEventListener('click', function(e) { 
-    console.log('buy') 
-    // adjust prices
-    // show new quantity
     e.preventDefault()
-  })  
+    var paid = Math.ceil(wows / 10)
+    wows -= paid
+    doge += Math.ceil(paid * 1000 / rate)    
+    socket.emit('bought', paid)
+    update_dom()
+  })
+  
+  document.getElementById('sell').addEventListener('click', function(e) { 
+    e.preventDefault()
+    var paid = Math.ceil(doge / 10)
+    doge -= paid
+    wows += Math.ceil(paid * rate / 1000) 
+    console.log(paid, doge, wows, rate, -paid)   
+    socket.emit('bought', -paid)
+    update_dom()
+  })
 </script></body></html>
