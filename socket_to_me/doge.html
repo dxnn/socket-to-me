@@ -1,0 +1,27 @@
+<html><head><style>body {font: 400 3em "Comic Sans MS"}</style></head><body>
+
+<img src="http://sherpa.local/~dann/talks/socket_to_me/doge.png">
+<a href="" id="buy">Buy</a>
+<a href="" id="sell">Sell</a>
+
+<p>You have <span id="doges">100</span> Doge</p>
+<p>1 Doge is <span id="wows">1</span> Wow</p>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io.connect('http://localhost')
+
+  socket.on('bounced', function (data) {
+    // post a new canvas thing
+    
+    
+    // function(e) { socket.emit('bounce', {x: e.x, y: e.y, hue: hue}) }
+  })
+  
+  document.getElementById('buy').addEventListener('click', function(e) { 
+    console.log('buy') 
+    // adjust prices
+    // show new quantity
+    e.preventDefault()
+  })  
+</script></body></html>

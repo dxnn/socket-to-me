@@ -2,16 +2,14 @@
 
 <script src="/socket.io/socket.io.js"></script>
 <script>
-  var hue = ~~(Math.random() * 360)
-  var paper = document.getElementById('paper').getContext('2d')
-  
+  var hue    = ~~(Math.random() * 360)                                    // fancy int
+  var paper  = document.getElementById('paper').getContext('2d')
   var socket = io.connect('http://localhost')
+
   socket.on('bounced', function (data) {
-    paper.fillStyle = 'hsl(' + data.hue + ', 60%, 60%)';
-    paper.fillRect(10*~~(data.x/10)-15, 10*~~(data.y/10)-15, 20, 20)
+    paper.fillStyle = 'hsl(' + data.hue + ', 80%, 50%)'                   // fancy color
+    paper.fillRect(10*~~(data.x/10)-15, 10*~~(data.y/10)-15, 20, 20)      // fancy quantization
   })
   
-  // show borking w/ sending event
-  document.addEventListener('click', function(e) { socket.emit('bounce', {x: e.x, y: e.y, hue: hue}) })
-  
+  document.addEventListener('click', function(e) { socket.emit('bounce', {x: e.x, y: e.y, hue: hue}) })  
 </script></body></html>

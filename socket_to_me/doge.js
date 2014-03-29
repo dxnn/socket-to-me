@@ -1,8 +1,8 @@
 var app = require('http').createServer(handler)
 var fs = require('fs')
-var html = fs.readFileSync(__dirname + '/' + (process.argv[2] || 'index.html'))
+var html = fs.readFileSync(__dirname + '/doge.html')
 function handler (req, res) { res.writeHead(200); res.end(html) }
-app.listen(8000)
+app.listen(8001)
 
 var io = require('socket.io').listen(app)
 
