@@ -1,0 +1,76 @@
+TALK #2:
+
+Visualizing Persistent Data Structures
+
+Basic persistent data structures like a linked list or sorted binary tree are easy enough to grasp from a single picture, but more complex structures are becoming increasingly important and widely used. Interactive animations can help us develop a deep intuition for how these complicated structures evolve over time, and can serve as a profiling tool to highlight inefficiencies in our data models.
+
+We'll look at some old chestnuts (red-black trees, queues, deques, finger trees) and some modern classics like persistent HAMTs and RRB-Trees. Along the way we'll see that data structures come in many different flavors: partially, fully, or confluently persistent; catenable or not; amortized or not; general performance characteristics; query functionality; update functionality and more. We'll examine the importance of those properties from a variety of use case perspectives.
+
+As we're exploring data structures we'll also consider some ways of navigating through them in purely functional languages, like zippers and lenses, and look at how recursive data structures are defined in lazy and eager languages.
+
+By the end you'll have developed your intuitions about persistent data structures and seen how data visualization techniques can help simplify reasoning about tricky structures and processes.
+
+
+
+
+Talk outline:
+
+- Data structure basics
+
+  - we'd like to be able to *read* data
+    ---> the head, the tail, #17, ordered differently...
+
+  - and *write* data too
+    ---> insert, merge (structures), modify (element)
+
+  - and to do it *quickly*
+    ---> yeah, yeah (quickly prove this matters, n^2 or n^3 
+    ---> so if 100 items takes 1ms, then scaling up to 10,000 items linearly takes 100ms,
+    ---> but by n^2 it takes 10 seconds! (and scaling to a million would take a week and a half [verify]) [day?]
+    ---> but n*lg(n) takes just 300ms (and a million would be a minute) [using base 10 instead of base 2]
+         (chart with lifetimes of things: n, n*log(n), n^2 and 2^n scaled over 100, 10000 and 1e6)
+
+  - and it'd be nice to not *clobber* other processes' changes
+    ---> so, immutable...
+
+  - and maybe this can all be *simple* to implement
+    ---> easy to implement means wider adoption, often reduces hidden constant-factor perf costs, less area for bugs, easier to work with for programmers because the model is simpler...
+    
+  - ... we're going to have to give something up, aren't we?
+    ---> oh yeah. immutability is often chucked for perf, but we'll see some cases where we get big perf gains (in addition to the reasoning gains)
+  
+  - start to build a 'data structure score card' that we can refer back to for each new structure
+    ---> yeah!!!!
+    - catenable or not
+    - partially, fully, or confluently persistent
+    - amortized or not
+    - general performance characteristics
+    - query functionality
+    - update functionality
+    - search / sort / delete / merge
+    - what else? 
+
+- Simple examples
+  - stack: use this to introduce the visualizations
+  - queue: amortized? -- we're already seeing interesting property options
+  - deque: catenable? -- these can get pretty complicated
+  - trees (red-black, other binary trees): more properties emerge, and the visuals become even more interesting
+
+- Fancy examples
+  - finger trees: we'll spend awhile on these, because looking at the differences between the various variants can yield understanding
+  - HAMTs: these form the basis of Clojure and Scala's hash maps, so we'll go in depth, and maybe look at Ctries while we're at it
+  - RRB-Trees: an interesting extension to immutable vectors that adds some fast new operations 
+
+- Grab bag
+  - purely functional traversals: zippers, lenses, maybe generic zippers too
+  - recursive data structure definitions in applicative-order and normal-order languages
+  - show some buggy code, play "spot the bug", then visualize the resulting data and see it immediately
+  - will probably fit these in to the data structure examples in a natural way rather than just bunching them up at the end
+ 
+- Wrapping up
+  - data structures have many different desirable properties
+  - think about your use cases when deciding which structure to use
+  - understanding the data structure implementation strengthens your mental model and predictive abilities
+  - data visualizations can provide intuition and deepen your understanding
+  - it can also help you understand complicated processes and find bugs
+
