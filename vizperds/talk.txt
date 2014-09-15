@@ -31,13 +31,149 @@ Talk outline:
          (chart with lifetimes of things: n, n*log(n), n^2 and 2^n scaled over 100, 10000 and 1e6)
 
   - and it'd be nice to not *clobber* other processes' changes
-    ---> so, immutable...
+    ---> so, immutable... 
 
   - and maybe this can all be *simple* to implement
     ---> easy to implement means wider adoption, often reduces hidden constant-factor perf costs, less area for bugs, easier to work with for programmers because the model is simpler...
     
   - ... we're going to have to give something up, aren't we?
     ---> oh yeah. immutability is often chucked for perf, but we'll see some cases where we get big perf gains (in addition to the reasoning gains)
+  
+- Simple examples
+  - stack: use this to introduce the visualizations
+  - queue: amortized? -- we're already seeing interesting property options
+  - deque: catenable? -- these can get pretty complicated
+  - trees (red-black, other binary trees): more properties emerge, and the visuals become even more interesting
+
+  ------> ask for intuitions about abstract vs concrete: stack, queue, list, array, etc. [API vs implementation]
+
+ABSTRACT: 
+    Stack: push, pop, [peek], [count]
+      --> concrete: Linked list
+    
+    Queue: enqueue, dequeue, [peek], [count]
+      --> concrete: Linked list
+          A doubly linked list has O(1) insertion and deletion at both ends, so is a natural choice for queues.
+          A regular singly linked list only has efficient insertion and deletion at one end. 
+          However, a small modification—keeping a pointer to the last node in addition to 
+          the first one—will enable it to implement an efficient queue.
+          two linked lists (working as stacks) can make a persistent queue
+    
+    Deque: 
+      --> concrete: dynamic array
+    
+    Priority queue: insert_with_priority, pull_highest_priority_element, [peek], [pull_lowest_priority_element]
+      --> concrete: heap [odd, since it's a totally different implementation than other queues]
+          (can also use an unsorted list, with O(n) speed (very bad compared to O(1)!))
+          
+    List
+    Array
+    Object
+    Map
+    Multimap
+    Multiset
+    Set
+    Tree
+    Graph
+    Container
+
+CONCRETE:
+    Linked list
+    Array
+    Record
+    Hash Table
+
+    Red-Black Tree
+    
+    
+  
+  ordering:
+  stack
+  linked list
+  queue
+  list
+  array
+  object (???)
+  everything
+  
+  
+  
+    
+  But also data TYPES, which are mostly kind of abstract DSes. ish.
+
+
+
+------ CARDS --------
+
+STACK
+push: add to end (last)
+pop:  remove from same end (last)
+*peek: get value of next pop
+*count: get length
+
+--> sigs from Turing's grand-students
+--> pic, natch
+
+:: linked list: O(1) 
+:: array: O(1), but fixed size [--you can only have one at a time], mutation?
+:: dynamic array: O(1), amortized, (mutation?)
+
+
+QUEUE
+enqueue: add to end (last)
+dequeue: remove from opposite end (first)
+*peek:   get value of next dequeue
+*count:  get length
+
+--> history
+--> pic
+
+:: doubly linked list: O(1), mutation
+:: linked list w/ tail pointer (add to tail): mutation
+:: array: O(1) if you treat it like a ring buffer, mutation, fixed size
+:: dynamic array: amortized O(1), mutation
+:: two stacks -> one queue: O(1), amortized, [persistent with more work], [non-amortized with more work]
+    -> Tarjan: persistent
+    -> Okasaki: amortized
+
+
+DEQUE
+push: add to end (last)
+pop:  remove from end (last)
+shift: add to front (first)
+unshift: remove from front (first)
+peek-last: get value of end
+peek-first: get value of front
+
+--> history
+--> pic
+
+:: doubly linked list: O(1), mutation
+:: array: O(1) if you treat it like a ring buffer, mutation, fixed size
+:: persistent is *tricky*, catenable [], confluently persistent [mergable, like github, makes a DAG], else ephemeral. partially persistent is read-only. 
+
+
+
+LIST
+
+
+
+
+linked list
+doubly linked list
+double linked list
+array
+object
+HAMT
+RRB-tree
+finger tree
+trie
+
+    
+  
+When you list the code mention GC [it's important]
+  
+  
   
   - start to build a 'data structure score card' that we can refer back to for each new structure
     ---> yeah!!!!
@@ -50,11 +186,12 @@ Talk outline:
     - search / sort / delete / merge
     - what else? 
 
-- Simple examples
-  - stack: use this to introduce the visualizations
-  - queue: amortized? -- we're already seeing interesting property options
-  - deque: catenable? -- these can get pretty complicated
-  - trees (red-black, other binary trees): more properties emerge, and the visuals become even more interesting
+
+
+Mutation Attacks!
+- 
+Real Time tasks (amortization can kill you here)
+
 
 - Fancy examples
   - finger trees: we'll spend awhile on these, because looking at the differences between the various variants can yield understanding
@@ -73,4 +210,16 @@ Talk outline:
   - understanding the data structure implementation strengthens your mental model and predictive abilities
   - data visualizations can provide intuition and deepen your understanding
   - it can also help you understand complicated processes and find bugs
+
+
+Conclusion points:
+- persistence has many benefits
+- but a few drawbacks
+- we can mitigate those by understand DS properties
+- DSs have a lot of properties
+...
+Data Structures are a CCG!
+
+@dann etc
+
 
