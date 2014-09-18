@@ -71,25 +71,11 @@
   </h1>
 </section>
 
-<section class="slide" id="whatisit">
-  <h1>
-    <p>What is a</p>
-    <p>Data Structure?</p>
-  </h1>
-</section>
-
 <section class="slide" id="notaccidental">
   <h1>
     <p>Data Structures are</p>
     <p>"Accidentally"</p>
     <p>Complicated</p>
-  </h1>
-</section>
-
-<section class="slide" id="gameshow">
-  <h1>
-    <p>Abstract or</p>
-    <p>Concrete?</p>
   </h1>
 </section>
 
@@ -163,14 +149,14 @@
 <section class="slide" id="r2">
   <h2>
     <p>Rule #2</p>
-    <p>Adjectives imply Concreteness</p>
+    <p>Adjectives => Concreteness</p>
   </h2>
 </section>
 
 <section class="slide" id="r2a">
   <h2>
     <p>Rule #2</p>
-    <p>Adjectives imply Concreteness</p>
+    <p>Adjectives => Concreteness</p>
   </h2>
   <p>Unless there's too many:</p>
   <p>Self-balancing binary search tree??</p>
@@ -179,7 +165,7 @@
 <section class="slide" id="r2b">
   <h2>
     <p>Rule #2</p>
-    <p>Adjectives imply Concreteness</p>
+    <p>Adjectives => Concreteness</p>
   </h2>
   <p>Or too few:</p>
   <p>- Associative array</p>
@@ -229,10 +215,67 @@
   <p>"It's complicated"</p>
 </section>
 
-<section class="slide" id="cons">
+<section class="slide" id="pers1">
+  <h1><p>
+    Persistent or Ephemeral?
+  </p></h1>
+</section>
+
+<section class="slide" id="pers1">
+  <h2><p>
+    Ephemeral
+  </p></h2>
+  <p>--------O-</p>
+</section>
+
+<section class="slide" id="pers2">
+  <h2><p>
+    Persistent
+  </p></h2>
+  <p>-O-O-O-O-O-O-O-O-</p>
+</section>
+
+<section class="slide" id="pers3">
+  <h2><p>
+    Fully Persistence
+  </p></h2>
+  <p> &nbsp; &nbsp; /-O-O-O-</p>
+  <p>-O-O-O-O-O-O-O-O-</p>
+</section>
+
+
+<section class="slide" id="pers4">
+  <h2><p>
+    Confluently Persistence
+  </p></h2>
+  <p> &nbsp; &nbsp; /-O-O-O-\</p>
+  <p>-O-O-O-O-O-O-O-O-</p>
+</section>
+
+<section class="slide" id="graphics">
   <h1>
-    <p>Concrete Consequences</p>
+    <p>Trees for persistence [one simple trick, show x->x']</p>
   </h1>
+</section>
+
+<section class="slide" id="graphics">
+  <h1>
+    <p>Trees for parallelism [because you've got choices]</p>
+  </h1>
+</section>
+
+<section class="slide" id="cons">
+  <h2>
+    <p>Concrete Consequences</p>
+  </h2>
+  <p>- Each operation has best, worst and average case behavior</p>
+  <p>- Which each have asymptotic bounds given by O, o, Ω, ω, and Θ notation</p>
+  <p>- And possibly fancy qualifiers like "amortized"</p>
+  <p>- There are also space implications</p>
+  <p>- And implementation complexity</p>
+  <p>- Which can impact the hidden constant costs</p>
+  <p>- And data locality concerns</p>
+  <p>- And ...</p>
 </section>
 
 <section class="slide" id="tables">
@@ -249,7 +292,7 @@
 
 <section class="slide" id="bbcards">
   <h1><p>
-    <img src="vizperds/images/frank-robinson.png">
+    <img src="vizperds/images/frank-robinson3.png">
   </p></h1>
 </section>
 
@@ -305,7 +348,7 @@
 
 <section class="slide" id="deque-dll">
   <h1><p>
-    Banker's queue
+    Batched queue
   </p></h1>
 </section>
 
@@ -322,102 +365,38 @@
 </section>
 
 
-<section class="slide" id="pers1">
-  <h2><p>
-    Persistence
-  </p></h2>
-  <p>Not persistent</p>
-  <p>--------O-</p>
-</section>
-
-<section class="slide" id="pers2">
-  <h2><p>
-    Persistence
-  </p></h2>
-  <p>Not persistent</p>
-  <p>--------O-</p>
-  <p>Persistent</p>
-  <p>-O-O-O-O-O-O-O-O-</p>
-</section>
-
-<section class="slide" id="pers3">
-  <h2><p>
-    Persistence
-  </p></h2>
-  <p>Not persistent</p>
-  <p>--------O-</p>
-  <p>Persistent</p>
-  <p>-O-O-O-O-O-O-O-O</p>
-  <p>Fully persistent</p>
-  <p> &nbsp; &nbsp; /-O-O-O-</p>
-  <p>-O-O-O-O-O-O-O-O-</p>
-</section>
-
-<section class="slide" id="pers4">
-  <h2><p>
-    Persistence
-  </p></h2>
-  <p>Not persistent</p>
-  <p>--------O-</p>
-  <p>Persistent</p>
-  <p>-O-O-O-O-O-O-O-O</p>
-  <p>Fully persistent</p>
-  <p> &nbsp; &nbsp; /-O-O-O-</p>
-  <p>-O-O-O-O-O-O-O-O-</p>
-  <p>Confluently persistent</p>
-  <p> &nbsp; &nbsp; /-O-O-O-\</p>
-  <p>-O-O-O-O-O-O-O-O-</p>
-</section>
-
-
 <section class="slide" id="graphics">
-  <h1><p>
-    Time for graphics!
-  </p></h1>
+  <h1>
+    <p>What about the data in my application?</p>
+  </h1>
 </section>
 
-
-<section class="slide" id="closing">
-  <h1><p>
-    In closing
-  </p></h1>
-</section>
-
-<section class="slide" id="quote">
-  <h1><p>
-    "So I'm wracking my brain trying to figure out how to present this, like, mountain of statistical data to you, when suddenly it hits me -- baseball!"
-  </p>
-  <p>
-    -- me, about 20 minutes ago
-  </p>
-</h1>
-</section>
 
 <section class="slide" id="close1">
-  <h1><p>
+  <h2><p>
     Rules of thumb!
-  </p>
-</h1>
+  </p></h2>
 </section>
 
 <section class="slide" id="close2">
   <h1><p>
-    Visualize all the things!
+    Data Structure Cards!
+  </p>
+  <p>
+    <img src="vizperds/images/ds-cg.png" >
   </p>
 </h1>
 </section>
 
 <section class="slide" id="close3">
-  <h1>
-    <p>
-      DATA STRUCTURES <br />
-      <img src="vizperds/images/ds-cg.png"> <br />
-      THE GAME
-    </p>
-  </h1>
+  <h1><p>
+    Visualize your data!
+  </p>
+  <p>
+    <img src="vizperds/images/vizit.png">
+  </p>
+</h1>
 </section>
-
-
 
 
 
@@ -434,7 +413,7 @@
     <p>
       dann @ bentobox . net
     </p>
-    <p>
+    <p style="display:none">
       datastructuresthegame . com
     </p>
   </h1>
@@ -444,8 +423,10 @@
 
 
 <!-- Grab CDN jQuery, with a protocol relative URL; fall back to local if offline -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
 <script>window.jQuery || document.write('<script src="../jquery-1.7.2.min.js"><\/script>')</script>
+-->
+<script src="jquery-1.7.2.min.js"></script>
 
 <!-- Deck Core and extensions -->
 <script src="core/deck.core.js"></script>
