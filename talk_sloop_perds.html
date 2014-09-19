@@ -36,12 +36,6 @@
       list-style-type: none;
       text-align: left;
     }
-    .deck-container .slide h1 {
-      font-size:2em;
-    }
-    .deck-container .slide h2 {
-      color: #3cb93c;
-    }
     .deck-container .slide h3 {
       font-size:1.5em;
       color: #333;
@@ -50,6 +44,54 @@
       color: #000;
       border: none;
     }
+    
+    .deck-container {
+      padding: 0px;
+    }
+    .deck-container .slide {
+/*      background: #1F9E57;*/
+      padding: 0px 20px;
+    }
+    .deck-container .slide > p {
+      color: white;
+      font-size: 1.2em;
+    }
+    .deck-container .slide > pre {
+      color: white;
+      font-size: 1.2em;
+    }
+    .deck-container .slide h1 {
+      font-size:2em;
+      color: white;
+    }
+    .deck-container .slide h2 {
+/*      color: #3cb93c;*/
+      color: white;
+      border: 0px;
+    }
+    
+    .white {
+      background-color: #fff;
+    }
+    .green {
+      background-color: #1F9E57;
+    }
+    
+    .blue {
+      background-color: #69f;
+    }
+    .teal {
+      background-color: #00A383;
+    }
+    .lightgreen {
+      background-color: #82B22C;
+    }
+    .red {
+      background-color: #E73A95;
+    }
+    .orange {
+      background-color: #FF7800;
+    }
 	</style>
 </head>
 
@@ -57,13 +99,13 @@
 
 
 <!-- Begin slides -->
-<section class="slide" id="blank-slide">
+<section class="slide green" id="blank-slide">
   <h1>
     
   </h1>
 </section>
 
-<section class="slide" id="title-slide">
+<section class="slide green" id="title-slide">
   <h1>
     <p>Visualizing</p>
     <p>Persistent</p>
@@ -71,7 +113,7 @@
   </h1>
 </section>
 
-<section class="slide" id="notaccidental">
+<section class="slide green" id="notaccidental">
   <h1>
     <p>Data Structures are</p>
     <p>"Accidentally"</p>
@@ -121,21 +163,21 @@
   </p></h1>
 </section>
 
-<section class="slide" id="roft">
+<section class="slide green" id="roft">
   <h1>
     <p>Rules of</p>
     <p>Thumb!</p>
   </h1>
 </section>
 
-<section class="slide" id="r1">
+<section class="slide green" id="r1">
   <h2>
     <p>Rule #1</p>
     <p>Generic Terms are Abstract</p>
   </h2>
 </section>
 
-<section class="slide" id="r1a">
+<section class="slide green" id="r1a">
   <h2>
     <p>Rule #1</p>
     <p>Generic Terms are Abstract</p>
@@ -146,14 +188,14 @@
   <p>- trie</p>
 </section>
 
-<section class="slide" id="r2">
+<section class="slide green" id="r2">
   <h2>
     <p>Rule #2</p>
     <p>Adjectives => Concreteness</p>
   </h2>
 </section>
 
-<section class="slide" id="r2a">
+<section class="slide green" id="r2a">
   <h2>
     <p>Rule #2</p>
     <p>Adjectives => Concreteness</p>
@@ -162,7 +204,7 @@
   <p>Self-balancing binary search tree??</p>
 </section>
 
-<section class="slide" id="r2b">
+<section class="slide green" id="r2b">
   <h2>
     <p>Rule #2</p>
     <p>Adjectives => Concreteness</p>
@@ -173,14 +215,14 @@
   <p>- Double-ended queue</p>
 </section>
 
-<section class="slide" id="r3">
+<section class="slide green" id="r3">
   <h2>
     <p>Rule #3</p>
     <p>Eponymous? Concrete.</p>
   </h2>
 </section>
 
-<section class="slide" id="r3a">
+<section class="slide green" id="r3a">
   <h2>
     <p>Rule #3</p>
     <p>Eponymous? Concrete.</p>
@@ -192,7 +234,7 @@
   <p>- AA tree</p>
 </section>
 
-<section class="slide" id="r3b">
+<section class="slide green" id="r3b">
   <h2>
     <p>Rule #3</p>
     <p>Proper name? Concrete.</p>
@@ -204,7 +246,7 @@
   <p>NO EXCEPTIONS</p>
 </section>
 
-<section class="slide" id="families">
+<section class="slide green" id="families">
   <h2>
     <p>Families</p>
   </h2>
@@ -215,56 +257,63 @@
   <p>"It's complicated"</p>
 </section>
 
-<section class="slide" id="pers1">
+<section class="slide green" id="pers1">
   <h1><p>
     Persistent or Ephemeral?
   </p></h1>
 </section>
 
-<section class="slide" id="pers1">
+<section class="slide green" id="pers1">
   <h2><p>
     Ephemeral
   </p></h2>
-  <p>--------O-</p>
+  <p><pre>--------O-</pre></p>
 </section>
 
-<section class="slide" id="pers2">
+<section class="slide green" id="pers2">
   <h2><p>
     Persistent
   </p></h2>
-  <p>-O-O-O-O-O-O-O-O-</p>
+  <p><pre>-O-O-O-O-O-O-O-O-</pre></p>
 </section>
 
-<section class="slide" id="pers3">
+<section class="slide green" id="pers3">
   <h2><p>
-    Fully Persistence
+    Fully Persistent
   </p></h2>
-  <p> &nbsp; &nbsp; /-O-O-O-</p>
-  <p>-O-O-O-O-O-O-O-O-</p>
+  <p><pre>
+       +-O-O-O-O-
+       |
+  -O-O-+-O-O-O-O-O-O-O-
+  </p></p>
 </section>
 
 
-<section class="slide" id="pers4">
+<section class="slide green" id="pers4">
   <h2><p>
-    Confluently Persistence
+    Confluently Persistent
   </p></h2>
-  <p> &nbsp; &nbsp; /-O-O-O-\</p>
-  <p>-O-O-O-O-O-O-O-O-</p>
+  <p><pre>
+       +-O-O-O-O-+
+       |          \
+  -O-O-+-O-O-O-O-O-+-O-O-
+  </p></p>
 </section>
 
-<section class="slide" id="graphics">
+<section class="slide green" id="trees-for-pers">
   <h1>
-    <p>Trees for persistence [one simple trick, show x->x']</p>
+    <p>Trees for persistence</p>
+    <p><img src="vizperds/images/xs-ys.png"></p>
   </h1>
 </section>
 
-<section class="slide" id="graphics">
+<section class="slide green" id="trees-for-para">
   <h1>
-    <p>Trees for parallelism [because you've got choices]</p>
+    <p>Trees for parallelism</p>
   </h1>
 </section>
 
-<section class="slide" id="cons">
+<section class="slide green" id="cons">
   <h2>
     <p>Concrete Consequences</p>
   </h2>
@@ -365,20 +414,20 @@
 </section>
 
 
-<section class="slide" id="graphics">
+<section class="slide green" id="graphics">
   <h1>
     <p>What about the data in my application?</p>
   </h1>
 </section>
 
 
-<section class="slide" id="close1">
-  <h2><p>
+<section class="slide green" id="close1">
+  <h1><p>
     Rules of thumb!
-  </p></h2>
+  </p></h1>
 </section>
 
-<section class="slide" id="close2">
+<section class="slide green" id="close2">
   <h1><p>
     Data Structure Cards!
   </p>
@@ -388,7 +437,7 @@
 </h1>
 </section>
 
-<section class="slide" id="close3">
+<section class="slide green" id="close3">
   <h1><p>
     Visualize your data!
   </p>
@@ -402,7 +451,7 @@
 
 
 
-<section class="slide" id="finally">
+<section class="slide green" id="finally">
   <h1 style="font-size:1em;">
     <p>
       @dann
