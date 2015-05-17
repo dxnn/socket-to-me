@@ -1,0 +1,178 @@
+TODOS DO THESE BECAUSE THEY'RE WHAT YOU NEED TO DO:
+- 
+
+
+
+
+
+
+
+
+animate rotations for binary search trees (not necessarily self-balancing, because splay trees)
+
+
+change the quiz slide so they're ALL individual slides, and buzz through them quickly after about five
+
+
+
+end with: 
+"in conclusion: data structures, the game! oh, and also. I like to end all my talks with this. it's kind of my motto. 'make great things. make the world better. help others do the same.' thank you!"
+
+explain via github: git is a fully persistent, confluent data structure
+other common examples?
+
+todo:
+
+- card outline
+  - list of cards
+    -- stack
+    -- queue
+    -- deque
+    - red-black tree
+    - list
+    
+    -- linked list
+    -- doubly linked list
+    - double linked list
+    - linked list w/ tail pointer
+    - array
+    - dynamic array
+    - 
+    - object
+    - HAMT
+    - RRB-tree
+    - finger tree
+    - trie
+
+  - data collection for each
+
+- make cards
+  - start with pencil and paper
+  - then photoshop
+
+- make slides
+  - html? graphics? both? code hilighting
+  
+- make slide cheatsheet
+
+
+
+Have Erin help w/ game name domain name
+
+
+- sequential vs associative
+
+- actually put in a graphic of baseball stats vs baseball cards
+
+
+
+amortization:
+As an aside, amortization is important to programming also. we're programmers, so we're inherently lazy -- it's one of our chief virtues, after all. But the trick is to amortize that laziness over a long period of time. All character flaws become virtues when you take a long enough view. The enemy to happiness isn't selfishness, it's short-sightedness.
+
+
+
+
+
+
+One clever trick for making persistent self-balancing binary search trees: rotation!
+
+two stacks is called a banker's queue? apparently. oh it's from okasaki ok.
+
+2-3 finger tree is actually pretty simple...
+
+---> the more adjectives a data structure has, the more likely it is to be concrete. unless it has so many that it's a collection of concrete implementations from which an API could be abstracted, like self-balancing binary search trees. If it starts with someone's name, it's definitely a concrete implementations. No exceptions. 
+
+"if you can say "x is an example of a y" or "x can be used as a y" or "x is the implementation for this y" then x is a concrete data structure and y is an abstract data structure. Try it out! 'A stack can be used as a linked list.' -- no! that doesn't make any sense! 'A 2-3 finger tree is the implementation of this persistent deque.' -- yes! perfect!"
+
+crit-bit tree? finger trees? hamts? that might be good. oh, rrb-trees.
+
+a map showing 'locality' and 'memory as a linearly addressable space' -- fake, because browsers and OSes and whatnot, but still. kinda cool. heatmap over time w/ gaps?
+
+confluently persistent DSs as a viz...
+
+watch D. Nolan's talk to get name
+
+Cantor's diagon alley proof [kajsdlfkajsdf]
+
+Judy tree, Patricia tree, ...
+
+js puzzler:
+//* asdf asdf *//
+    vs
+//* asdf
+    asdf *//
+
+{ a:3, //* asdf asdf *// }
+SyntaxError: Unexpected token }
+{ a:3, //* asdf asdf *// 
+SyntaxError: Unexpected token }
+{  //* asdf asdf *// }
+SyntaxError: Unexpected end of input
+{  //* asdf
+ asdf *// }
+SyntaxError: Unexpected token }
+{  //* asdf
+ asdf *// 
+SyntaxError: Unexpected token }
+
+
+
+
+facebook vectors:
+- four numbers across the top: two stable because the size doesn't change, but the middle two keep sliding along like a camera on tracks
+- black represents data divisions [turn this on after first showing it without], so we can see the separation into distinct chunks of size 32, plus a tail that grows [can we reduce this factor to get a more interesting image, and also somehow give an indication of how "deep" the value is?
+
+
+
+
+lego castles:
+
+non-persistent
+
+           0
+
+persistent
+
+0-0-0-0-0-0
+
+fully persistent
+
+      /-0-0-0
+0-0-0-0-0-0-0
+
+"it's like someone managed to slip 90s surfer speak past the cabal. i'm fully stoked. i'm fully persistent, dude. probably some socal prof."
+
+
+confluently persistent
+      /-0-0-\
+0-0-0-0-0-0
+
+"confluently? really? see, this is just another example of how *they* try to keep you from understanding data structures. i mean really. although the conspiracy is clever -- once you get past the surface this term actually has a nice meaning: a confluence is the place two rivers meet. 
+so now your lego castle ...
+so this is basically git, right? we can branch and merge. they could have just called it a "git-style" data structure and you'd all know what they meant right away, right? 
+
+
+get array.mutate set up
+
+"now the conspiracy's back to it's old games. confluently? really? you've probably heard of a 'confluence' when you were reading some ancient manuscript in high school english. it's the place where two rivers flow together. this is just another example of 
+
+
+
+baseball stats -> baseball cards
+
+
+"so I'm like wracking my brain trying to come up with some kind of, like, solution to this... just absolutely monstrous nasty problem when suddenly it hits me -- baseball!" -- me, about 20 minutes ago.
+
+this, this is a table for accountants and actuaries. WE ARE NOT ACTUARIES. we are children, playing in the fertile garden of digital phantasmagoria, and homunculi who perform our every whim. we are electronic summoners [sicp]. we are freaking wizards! wizards do not do large tables of data. wizards smash! (like helen mirren. ladies be wizards too. a wizard is anyone who deals lightening with both hands.)
+
+
+
+
+- put cards on github
+- send link to henry
+- simplify flow to account for new ideas, transitions, and time constraints
+- puke up a hamburger
+- 
+
+
+

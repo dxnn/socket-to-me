@@ -1,0 +1,51 @@
+function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}
+
+What is that?
+
+JSON.stringify(fun(3))
+
+Von Neumann definition of ordinals
+
+memoization
+
+
+function fun(n) {var x=[0]; while(n--) x[n] = [n+1, fun(n)]; return x}
+
+UV.add_stepper( 'funviz'
+              , { init: function() { i=0; return fun(i) }
+                , step: function(data) { return fun(i++) } } )
+
+scheduler.go('funviz')
+
+
+
+
+
+After function fun, go to genart. 
+
+Why would you develop a programming language?
+
+What are the constraints on this one?
+
+How do we fulfill those constraints?
+
+
+
+
+After that, some live coding demos
+
+
+
+
+
+
+
+
+
+env = {}
+env['inc'] = function(n) {return n+1}
+env['dec'] = function(n) {return n-1}
+
+function exec(program) { 
+  return program.reduce(function(acc, inst) {
+    return env[inst](acc)}, 0)}

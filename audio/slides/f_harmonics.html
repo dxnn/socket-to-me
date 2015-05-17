@@ -1,0 +1,142 @@
+<html>
+  <head>
+    <title>Audio APIs</title>
+    <style type="text/css" media="screen">
+      body {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px; top: 0px;
+      }
+
+      .presentation {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0px;
+        top: 0px;
+        display: block;
+        overflow: hidden;
+        background: #778;
+      }
+      
+      #inner {
+        color: #ccc;
+        font: 5em 'Yanone Kaffeesatz';
+        letter-spacing: 2px;
+        position: absolute;
+        top: 10%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+      }
+      
+      code {
+        color: #ccc;
+        font-size: 2em;
+        background: #556;
+        position: absolute;
+        top: 40%;
+        left: 40%;
+      }
+    </style>
+    
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+    <div class="presentation">
+      <div id="inner">
+        <p>Now with harmonics</p>
+      </div>
+      <pre><code>
+        Add harmonic code here -- do it straight for now, but progressively add osc and gains to gains
+        
+        var gain1600 = context.createGainNode();
+        gain1600.gain.value = 0.5;
+
+        var osc1600 = context.createOscillator()
+        osc1600.frequency.value = 1600
+        osc1600.connect(gain1600)
+        osc1600.noteOn(0)
+
+        var gain1400 = context.createGainNode();
+        gain1400.gain.value = 0.5;
+        gain1600.connect(gain1400)
+
+        var osc1400 = context.createOscillator()
+        osc1400.frequency.value = 1400
+        osc1400.connect(gain1400)
+        osc1400.noteOn(0)
+        
+        var gain1200 = context.createGainNode();
+        gain1200.gain.value = 0.5;
+        gain1400.connect(gain1200)
+
+        var osc1200 = context.createOscillator()
+        osc1200.frequency.value = 1200
+        osc1200.connect(gain1200)
+        osc1200.noteOn(0)
+        
+        var gain1000 = context.createGainNode();
+        gain1000.gain.value = 0.5;
+        gain1200.connect(gain1000)
+
+        var osc1000 = context.createOscillator()
+        osc1000.frequency.value = 1000
+        osc1000.connect(gain1000)
+        osc1000.noteOn(0)
+        
+        var gain800 = context.createGainNode();
+        gain800.gain.value = 0.5;
+        gain1000.connect(gain800)
+
+        var osc800 = context.createOscillator()
+        osc800.frequency.value = 800
+        osc800.connect(gain800)
+        osc800.noteOn(0)
+        
+        var gain600 = context.createGainNode();
+        gain600.gain.value = 0.5;
+        gain800.connect(gain600)
+
+        var osc600 = context.createOscillator()
+        osc600.frequency.value = 600
+        osc600.connect(gain600)
+        osc600.noteOn(0)
+        
+        var gain400 = context.createGainNode();
+        gain400.gain.value = 0.5;
+        gain600.connect(gain400)
+
+        var osc400 = context.createOscillator()
+        osc400.frequency.value = 400
+        osc400.connect(gain400)
+        osc400.noteOn(0)
+        
+        var gain200 = context.createGainNode();
+        gain200.gain.value = 0.5;
+        gain400.connect(gain200)
+
+        var osc200 = context.createOscillator()
+        osc200.frequency.value = 200
+        osc200.connect(gain200)
+        osc200.noteOn(0)
+        
+        var gain100 = context.createGainNode();
+        gain100.gain.value = 0.5;
+        gain400.connect(gain100)
+
+        var osc100 = context.createOscillator()
+        osc100.frequency.value = 100
+        osc100.connect(gain100)
+        osc100.noteOn(0)
+        
+        gain100.connect(context.destination)
+        
+      </code><pre>
+    </div>
+  </body>
+</html>

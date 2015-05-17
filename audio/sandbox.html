@@ -1,0 +1,126 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Audio Adventure Sandbox</title>
+  <link href='http://sherpa.local/~dann/audio/public/css/main.css' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+</head>
+
+<body id="">
+   
+  <script type="text/daml" id="preload">
+    {// Import any needed commands here //}
+    {// (note that you can't access any other script blocks from here...) //}
+    
+    {daml alias string "audio add-osc freq" as :osc}
+    {daml alias string "audio add-gain value" as :gain}
+    {daml alias string "audio set-param name" as :set}
+    {daml alias string "audio play" as :play}
+    {daml alias string "audio pause" as :pause}
+    {daml alias string "audio reset" as :reset}
+    {daml alias string "audio connect" as :connect}
+    {daml alias string "audio connect to 0" as :output}
+
+    {daml alias string "list range length" as :range}
+    {daml alias string "math multiply value" as :times}
+    {daml alias string "math pow exp" as :exp}
+    
+    {dom on event :submit id :dform filter :form}
+  </script>
+    
+  <div id="presentation">
+    
+    <div id="graphics">
+      <canvas id="canvas" width="1000" height="50" style="display: block;"></canvas>
+    </div>
+    
+    <div id="header">
+      Audio Adventure Sandbox
+    </div>
+    
+    <div id="dform">
+      <form action="" method="" id="some_daml">
+        <textarea name="daml_input" id="daml_input" rows="40">
+{range 8 | map daml "{osc {value | times 100} | gain {.8 | exp value}}" | output}
+
+{osc | gain 1 | > :vca | output || osc 5 | > :lfo | connect to vca as :gain}
+{lfo | set :frequency to 10}
+{lfo | set :frequency to 1}
+
+{osc 5 | gain 80 | osc 440 | output}
+
+        </textarea>
+        
+        <input type="submit" name="play" value="play" id="play" />
+        <textarea name="commands" style="display:none">
+          {audio reset}
+          {daml_input | unquote}
+        </textarea>
+      </form>
+    </div>
+    
+  </div>
+
+  <script type="text/javascript" src="http://sherpa.local/~dann/katsu/nodely/__underscore.js"></script>
+  <script type="text/javascript" src="http://sherpa.local/~dann/katsu/nodely/__jquery.js"></script>
+  <script type="text/javascript" src="http://sherpa.local/~dann/audio/get.php?file=node_modules/daml"></script>
+  
+  <script type="text/javascript">
+    $(document).ready(function() {
+      // preload
+      DAML.run($('#preload').text())
+
+      // compile & bind the text/daml templates
+      $("script[type*=daml]").each(function() {
+        // id it
+        var begin, end, block, id, el, pid = $(this).parent()[0].id
+        id = this.id || pid || (DAML.onerror("Can't find a block id for the script tag") && "foo")
+      
+        if(id == 'preload') return
+      
+        // block it
+        begin = '{begin ' + id + '} '
+        end = ' {end ' + id + '}'
+        block = begin + this.innerHTML + end
+        DAML.run(block)
+      
+        // attach it
+        el = this.dataset.el || (id == pid) ? pid : false
+        if(el) {
+          DAML.run('{dom set_template id :' + el + ' daml ' + id + '}')
+          if(this.dataset.var) {
+            DAML.run('{variable bind path :' + this.dataset.var + ' daml "{dom refresh id :' + el + '}"}')
+          }
+        }
+      })      
+      
+      // viz stuff... yurmx
+      // (mostly stolen from www.smartjava.org/examples/webaudio/)
+      ctx = $("#canvas").get()[0].getContext("2d"); // FIXME: global yuck yuck
+      var gradient = ctx.createLinearGradient(0,0,0,50);
+      gradient.addColorStop(1,'#00ff00');
+      gradient.addColorStop(0,'#ffff00');
+      javascriptNode.onaudioprocess = function() {
+          // get the average for the first channel
+          var array =  new Uint8Array(analyser.frequencyBinCount);
+          analyser.getByteFrequencyData(array);
+
+          // clear the current state
+          ctx.clearRect(0, 0, 1000, 50);
+
+          // set the fill style
+          ctx.fillStyle=gradient;
+          drawSpectrum(array);
+      }
+
+      function drawSpectrum(array) {
+        for ( var i = 0; i < (array.length); i++ ){
+          var value = array[i];
+          ctx.fillRect(i*5, 55-(value/5), 3, 50);
+        }
+      };
+    })
+  </script>
+  
+</body>
+</html>

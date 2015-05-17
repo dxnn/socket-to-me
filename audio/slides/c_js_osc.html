@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Audio APIs</title>
+    <style type="text/css" media="screen">
+      body {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px; top: 0px;
+      }
+
+      .presentation {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0px;
+        top: 0px;
+        display: block;
+        overflow: hidden;
+        background: #778;
+      }
+      
+      #inner {
+        color: #ccc;
+        font: 5em 'Yanone Kaffeesatz';
+        letter-spacing: 2px;
+        position: absolute;
+        top: 10%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+      }
+      
+      code {
+        color: #ccc;
+        font-size: 2em;
+        background: #556;
+        position: absolute;
+        top: 40%;
+        left: 40%;
+      }
+    </style>
+    
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+    <div class="presentation">
+      <div id="inner">
+        <p>Basic oscillator</p>
+      </div>
+      <pre><code>
+var osc = context.createOscillator()
+osc.connect(output)
+osc.frequency.value = 440
+osc.type = osc.SINE
+osc.noteOn(0)
+      </code><pre>
+    </div>
+  </body>
+</html>
