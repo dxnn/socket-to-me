@@ -1,0 +1,86 @@
+    body {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      left: 0px; top: 0px;
+      background: #778;
+    }
+
+    #presentation {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0px;
+      top: 0px;
+      display: block;
+/*      overflow: hidden;*/
+    }
+    
+    #graphics {
+      top: 0px;
+      left: 10%;
+    }
+    
+    #header {
+      color: #ccc;
+      font: 5em 'Yanone Kaffeesatz';
+      letter-spacing: 2px;
+/*      position: absolute;*/
+      top: 55px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+    }
+    
+    #bullets {
+      color: #778;
+      font: 3em 'Yanone Kaffeesatz';
+/*      letter-spacing: 2px;*/
+/*      position: absolute;*/
+/*      top: 20%;*/
+      left: 0;
+      width: 100%;
+      text-align: center;
+    }
+    
+    ul {
+      list-style-type: none;
+    }
+    
+    #code {
+      color: #ccc;
+      font-size: 2em;
+      background: #556;
+      position: absolute;
+/*      top: 40%;*/
+      left: 10%;
+      min-width: 80%;
+    }
+    
+    #code p {
+      padding: 0;
+      margin: 0;
+    }
+    
+    #dform {
+/*      color: #ccc;*/
+/*      font-size: 2em;*/
+/*      background: #556;*/
+      position: absolute;
+/*      top: 40%;*/
+      left: 0;
+      width: 100%;
+/*      height: 50px;*/
+    }
+
+    #daml_input {
+      position: absolute;
+      color: #ccc;
+      font-size: 2em;
+      background: #556;
+/*      position: absolute;*/
+/*      top: 40%;*/
+      left: 10%;
+      width: 80%;
+    }
