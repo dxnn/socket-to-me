@@ -42,7 +42,6 @@
 
 <body class="deck-container">
 
-<!-- Begin slides -->
 <section class="slide" id="title-slide">
   <h1>
     <p>Visualizing</p>
@@ -51,32 +50,556 @@
   </h1>
 </section>
 
-<section class="slide" id="title-slide1">
-  <h1>
-    <p><strike>Visualizing</strike></p>
-    <p>Persistent</p>
-    <p>Data Structures</p>
-  </h1>
-</section>
-
-<section class="slide" id="title-slide2">
-  <h1>
-    <p><strike>Visualizing</strike></p>
-    <p><strike>Persistent</strike></p>
-    <p>Data Structures</p>
-  </h1>
-</section>
-
 <section class="slide" id="injs">
+  <p>
+    <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
+  </p>
+</section>
+
+<section class="slide" id="whatisit">
+  <p>
+    <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
+  </p>
   <h1>
-    <p>[ ] | { }</p>
+    <p>What does it do?</p>
+  </h1>
+</section>
+
+<section class="slide" id="whatisit">
+  <p>
+    <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
+  </p>
+  <h1>
+    <p>BRAINS</p>
+  </h1>
+</section>
+
+<section class="slide" id="whatisit">
+  <p>
+    <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
+  </p>
+  <h1>
+    <p>JS -> BRAIN</p>
+  </h1>
+</section>
+
+<section class="slide" id="whatisit">
+  <p>
+    <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
+  </p>
+  <h1>
+    <p>V8 code</p>
+  </h1>
+</section>
+
+<section class="slide" id="whatisit">
+  <p>
+    <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
+  </p>
+  <h1>
+    <p>ES2015 spec</p>
+  </h1>
+</section>
+
+<section class="slide" id="whatisit">
+  <p>
+    <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
+  </p>
+  <h1>
+    <p>TC39 email</p>
+  </h1>
+</section>
+
+<!-- maybe denotational/operational semantics -->
+
+<section class="slide" id="whatisit">
+  <p>
+    <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
+  </p>
+  <h1>
+    <p>Brain looking at code</p>
+  </h1>
+</section>
+
+<section class="slide" id="whatisit">
+  <p>
+    <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
+  </p>
+  <h1>
+    <p>I -> [?] -> O</p>
+  </h1>
+</section>
+
+<section class="slide" id="zerotofour">
+  <p>
+    <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
+  </p>
+  <p><code>fun(0): []</code></p>
+  <p><code>fun(1): [Array[0]]</code></p>
+  <p><code>fun(2): [Array[0], Array[1]]</code></p>
+  <p><code>fun(3): [Array[0], Array[1], Array[2]]</code></p>
+  <p><code>fun(4): [Array[0], Array[1], Array[2], Array[3]]</code></p>
+  <p><code>fun(5): [Array[0], Array[1], Array[2], Array[3], Array[4]]</code></p>
+</section>
+
+<section class="slide" id="stringify">
+  <p>
+    <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
+  </p>
+  <p><code>JSON.stringify(fun(8)): [[],[[]],[[],[[]]],[[],[[]],[[],[[]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]]]]]]]</code></p>
+</section>
+
+<section class="slide" id="whatisit">
+  <p>
+    <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
+  </p>
+  <h1>
+    <p>Data viz quote for quadrants</p>
+  </h1>
+</section>
+
+<section class="slide" id="whatisit">
+  <p>
+    <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
+  </p>
+  <h1>
+    <p>CUT TO UNDERVIEW</p>
+  </h1>
+</section>
+
+<section class="slide" id="whatisit">
+  <p>
+    <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
+  </p>
+  <p style="margin:0px;padding:0px"><code>JSON.stringify(fun(8), 0, 2):</code></p>
+  <p style="margin:0px;padding:0px"><pre style="font-size: 8px"><code>
+  [
+    [],
+    [
+      []
+    ],
+    [
+      [],
+      [
+        []
+      ]
+    ],
+    [
+      [],
+      [
+        []
+      ],
+      [
+        [],
+        [
+          []
+        ]
+      ]
+    ],
+    [
+      [],
+      [
+        []
+      ],
+      [
+        [],
+        [
+          []
+        ]
+      ],
+      [
+        [],
+        [
+          []
+        ],
+        [
+          [],
+          [
+            []
+          ]
+        ]
+      ]
+    ],
+    [
+      [],
+      [
+        []
+      ],
+      [
+        [],
+        [
+          []
+        ]
+      ],
+      [
+        [],
+        [
+          []
+        ],
+        [
+          [],
+          [
+            []
+          ]
+        ]
+      ],
+      [
+        [],
+        [
+          []
+        ],
+        [
+          [],
+          [
+            []
+          ]
+        ],
+        [
+          [],
+          [
+            []
+          ],
+          [
+            [],
+            [
+              []
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      [],
+      [
+        []
+      ],
+      [
+        [],
+        [
+          []
+        ]
+      ],
+      [
+        [],
+        [
+          []
+        ],
+        [
+          [],
+          [
+            []
+          ]
+        ]
+      ],
+      [
+        [],
+        [
+          []
+        ],
+        [
+          [],
+          [
+            []
+          ]
+        ],
+        [
+          [],
+          [
+            []
+          ],
+          [
+            [],
+            [
+              []
+            ]
+          ]
+        ]
+      ],
+      [
+        [],
+        [
+          []
+        ],
+        [
+          [],
+          [
+            []
+          ]
+        ],
+        [
+          [],
+          [
+            []
+          ],
+          [
+            [],
+            [
+              []
+            ]
+          ]
+        ],
+        [
+          [],
+          [
+            []
+          ],
+          [
+            [],
+            [
+              []
+            ]
+          ],
+          [
+            [],
+            [
+              []
+            ],
+            [
+              [],
+              [
+                []
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      [],
+      [
+        []
+      ],
+      [
+        [],
+        [
+          []
+        ]
+      ],
+      [
+        [],
+        [
+          []
+        ],
+        [
+          [],
+          [
+            []
+          ]
+        ]
+      ],
+      [
+        [],
+        [
+          []
+        ],
+        [
+          [],
+          [
+            []
+          ]
+        ],
+        [
+          [],
+          [
+            []
+          ],
+          [
+            [],
+            [
+              []
+            ]
+          ]
+        ]
+      ],
+      [
+        [],
+        [
+          []
+        ],
+        [
+          [],
+          [
+            []
+          ]
+        ],
+        [
+          [],
+          [
+            []
+          ],
+          [
+            [],
+            [
+              []
+            ]
+          ]
+        ],
+        [
+          [],
+          [
+            []
+          ],
+          [
+            [],
+            [
+              []
+            ]
+          ],
+          [
+            [],
+            [
+              []
+            ],
+            [
+              [],
+              [
+                []
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        [],
+        [
+          []
+        ],
+        [
+          [],
+          [
+            []
+          ]
+        ],
+        [
+          [],
+          [
+            []
+          ],
+          [
+            [],
+            [
+              []
+            ]
+          ]
+        ],
+        [
+          [],
+          [
+            []
+          ],
+          [
+            [],
+            [
+              []
+            ]
+          ],
+          [
+            [],
+            [
+              []
+            ],
+            [
+              [],
+              [
+                []
+              ]
+            ]
+          ]
+        ],
+        [
+          [],
+          [
+            []
+          ],
+          [
+            [],
+            [
+              []
+            ]
+          ],
+          [
+            [],
+            [
+              []
+            ],
+            [
+              [],
+              [
+                []
+              ]
+            ]
+          ],
+          [
+            [],
+            [
+              []
+            ],
+            [
+              [],
+              [
+                []
+              ]
+            ],
+            [
+              [],
+              [
+                []
+              ],
+              [
+                [],
+                [
+                  []
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  ]</code></pre></p>
+</section>
+
+<section class="slide" id="whatisit">
+  <p>
+    <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
+  </p>
+  <h1>
+    <p>I HEARD YOU LIKE FRACTALS</p>
   </h1>
 </section>
 
 <section class="slide" id="whatisit">
   <h1>
-    <p>What is a</p>
-    <p>Data Structure?</p>
+    <p>How does it do it?</p>
+  </h1>
+</section>
+
+<section class="slide" id="whatisit">
+  <h1>
+    <p>I -> [¯\_(ツ)_/¯] -> O</p>
+  </h1>
+</section>
+
+<section class="slide" id="whatisit">
+  <h1>
+    <p>How does it do it?</p>
+    <p>Why does that matter?</p>
+    <p>- Thing go wrong</p>
+    <p>- Leaky abstractions</p>
+    <p>- It's your own code</p>
+  </h1>
+</section>
+
+<section class="slide" id="whatisit">
+  <p>
+    <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
+  </p>
+  <h1>
+    <p>How does it do it?</p>
+    <p>Why does that matter?</p>
+    <p>- Thing go wrong</p>
+    <p>- Leaky abstractions</p>
+    <p>- It's your own code</p>
   </h1>
 </section>
 
