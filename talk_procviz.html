@@ -50,13 +50,13 @@
   </h1>
 </section>
 
-<section class="slide" id="injs">
+<section class="slide" id="fun">
   <p>
     <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
   </p>
 </section>
 
-<section class="slide" id="whatisit">
+<section class="slide" id="fun1">
   <p>
     <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
   </p>
@@ -65,7 +65,7 @@
   </h1>
 </section>
 
-<section class="slide" id="whatisit">
+<section class="slide" id="fun2">
   <p>
     <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
   </p>
@@ -74,7 +74,7 @@
   </h1>
 </section>
 
-<section class="slide" id="whatisit">
+<section class="slide" id="fun3">
   <p>
     <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
   </p>
@@ -83,7 +83,7 @@
   </h1>
 </section>
 
-<section class="slide" id="whatisit">
+<section class="slide" id="fun4">
   <p>
     <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
   </p>
@@ -92,7 +92,7 @@
   </h1>
 </section>
 
-<section class="slide" id="whatisit">
+<section class="slide" id="fun5">
   <p>
     <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
   </p>
@@ -101,7 +101,7 @@
   </h1>
 </section>
 
-<section class="slide" id="whatisit">
+<section class="slide" id="fun6">
   <p>
     <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
   </p>
@@ -112,7 +112,7 @@
 
 <!-- maybe denotational/operational semantics -->
 
-<section class="slide" id="whatisit">
+<section class="slide" id="fun7">
   <p>
     <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
   </p>
@@ -121,7 +121,7 @@
   </h1>
 </section>
 
-<section class="slide" id="whatisit">
+<section class="slide" id="fun8">
   <p>
     <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
   </p>
@@ -149,7 +149,7 @@
   <p><code>JSON.stringify(fun(8)): [[],[[]],[[],[[]]],[[],[[]],[[],[[]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]],[[],[[]],[[],[[]]],[[],[[]],[[],[[]]]]]]]]]</code></p>
 </section>
 
-<section class="slide" id="whatisit">
+<section class="slide" id="fun9">
   <p>
     <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
   </p>
@@ -158,7 +158,7 @@
   </h1>
 </section>
 
-<section class="slide" id="whatisit">
+<section class="slide" id="fun10">
   <p>
     <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
   </p>
@@ -167,7 +167,7 @@
   </h1>
 </section>
 
-<section class="slide" id="whatisit">
+<section class="slide" id="fun11">
   <p>
     <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
   </p>
@@ -559,7 +559,7 @@
   ]</code></pre></p>
 </section>
 
-<section class="slide" id="whatisit">
+<section class="slide" id="fun12">
   <p>
     <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
   </p>
@@ -568,226 +568,127 @@
   </h1>
 </section>
 
-<section class="slide" id="whatisit">
+<section class="slide" id="howdoesit">
   <h1>
     <p>How does it do it?</p>
   </h1>
 </section>
 
-<section class="slide" id="whatisit">
+<section class="slide" id="io">
   <h1>
     <p>I -> [¯\_(ツ)_/¯] -> O</p>
   </h1>
 </section>
 
-<section class="slide" id="whatisit">
+<section class="slide" id="issues">
   <h1>
-    <p>How does it do it?</p>
-    <p>Why does that matter?</p>
+    <p>- Statefulness</p>
     <p>- Thing go wrong</p>
     <p>- Leaky abstractions</p>
     <p>- It's your own code</p>
   </h1>
 </section>
 
-<section class="slide" id="whatisit">
-  <p>
-    <code>function fun(n) {var x=[]; while(n--) x[n] = fun(n); return x}</code>
-  </p>
+<section class="slide" id="idea">
   <h1>
-    <p>How does it do it?</p>
-    <p>Why does that matter?</p>
-    <p>- Thing go wrong</p>
-    <p>- Leaky abstractions</p>
-    <p>- It's your own code</p>
+    <p>Idea: What if you could see the whole thing?</p>
   </h1>
 </section>
 
-<section class="slide" id="ac1">
+<section class="slide" id="examples">
+  <h1>
+    <p>EXAMPLES: game of life, wireworld, minecraft, on-a-chip viz</p>
+  </h1>
+</section>
+
+<section class="slide" id="problem">
+  <h1>
+    <p>Problem: JS is huge</p>
+  </h1>
+</section>
+
+<section class="slide" id="solution">
+  <h1>
+    <p>Solution: try a smaller language</p>
+  </h1>
+</section>
+
+<section class="slide" id="part2">
+  <h1>
+    <p>Part 2</p>
+    <p>Let's design a language</p>
+<!-- Easy and fun. well, easy. for some value of fun
+     Gives you a lot of appreciation for TC39 etc
+     New functions and operators when needed... but now you can edit the whole thing
+     Most important thing to remember: no one will ever use your language
+     (frees you from concerns about documentation, code clarity, marketing, etc, so you can focus on building something interesting and fun and cool. and then maybe if it's fun enough other people will like it and you can do all that other work then!)
+     -->
+  </h1>
+</section>
+
+<section class="slide" id="should">
+  <h1>
+    <p>What should it do?</p>
+<!-- Since we're going to show memory anyway, we may as well put something interesting in there; let's have it do image editing -->
+  </h1>
+</section>
+
+<section class="slide" id="should2">
+  <h1>
+    <p>What should it do?</p>
+    <p>Image editing</p>
+<!-- Also, making programs is hard, so let's look at random ones (also, then we don't know what they do ahead of time) -->
+  </h1>
+</section>
+
+<section class="slide" id="should3">
+  <h1>
+    <p>What should it do?</p>
+    <p>Image editing</p>
+    <p>Random programs</p>
+<!-- Also, making programs is hard, so let's look at random ones (also, then we don't know what they do ahead of time) -->
+  </h1>
+</section>
+
+<section class="slide" id="constraints">
+  <h1>
+    <p>Constraints:</p>
+    <p>Always terminates</p>
+    <p>Compositionally simple</p>
+    <p>No compile-time failures</p>
+    <p>No run-time failures</p>
+    <p>Easy to implement</p>
+  </h1>
+</section>
+
+<section class="slide" id="asdfasdf">
+  <h1>
+    <p>CUT TO THE CODE</p>
+<!-- then the one two three sequence -->
+  </h1>
+</section>
+
+<section class="slide" id="fff">
+  <h1>
+    <p>What would this look like for JS?</p>
+  </h1>
+</section>
+
+<section class="slide" id="qweqwe">
+  <h1>
+    <p>What would this look like for JS?</p>
+  </h1>
+</section>
+
+
+
+
+
+<!--<section class="slide" id="ac1">
   <h1><p>
     <img src="vizperds/images/abstract-concrete-1.png">
   </p></h1>
-</section>
-
-<section class="slide" id="ac2">
-  <h1><p>
-    <img src="vizperds/images/abstract-concrete-2.png">
-  </p></h1>
-</section>
-
-<section class="slide" id="ac3">
-  <h1><p>
-    <img src="vizperds/images/abstract-concrete-3.png">
-  </p></h1>
-</section>
-
-<section class="slide" id="ac4">
-  <h1><p>
-    <img src="vizperds/images/abstract-concrete-4.png">
-  </p></h1>
-</section>
-
-<section class="slide" id="ac5">
-  <h1><p>
-    <img src="vizperds/images/abstract-concrete-5.png">
-  </p></h1>
-</section>
-
-<section class="slide" id="ac6">
-  <h1><p>
-    <img src="vizperds/images/abstract-concrete-6.png">
-  </p></h1>
-</section>
-
-<section class="slide" id="ac7">
-  <h1><p>
-    <img src="vizperds/images/abstract-concrete-7.png">
-  </p></h1>
-</section>
-
-<section class="slide" id="tables">
-  <h1><p>
-    <img src="vizperds/images/tables.png">
-  </p></h1>
-</section>
-
-<section class="slide" id="gs-are-cg">
-  <h1><p>
-    <img src="vizperds/images/ds-cg.png">
-  </p></h1>
-</section>
-
-<section class="slide" id="stackcard">
-  <h1><p>
-    <img src="vizperds/images/stack.png">
-  </p></h1>
-</section>
-
-<section class="slide" id="linkedlistcard">
-  <h1><p>
-    <img src="vizperds/images/linkedlist.png">
-  </p></h1>
-</section>
-
-<section class="slide" id="both">
-  <h1><p>
-    <img src="vizperds/images/stack-ll.png">
-  </p></h1>
-</section>
-
-<section class="slide" id="qstackcard">
-  <h1><p>
-    <img src="vizperds/images/queue.png">
-  </p></h1>
-</section>
-
-<section class="slide" id="queue-ll">
-  <h1><p>
-    <img src="vizperds/images/queue-ll.png">
-  </p></h1>
-</section>
-
-<section class="slide" id="dlinkedlistcard">
-  <h1><p>
-    <img src="vizperds/images/doublylinkedlist.png">
-  </p></h1>
-</section>
-
-<section class="slide" id="queue-dll">
-  <h1><p>
-    <img src="vizperds/images/queue-dll.png">
-  </p></h1>
-</section>
-
-<section class="slide" id="deque-dll">
-  <h1><p>
-    Double linked list <br />
-    all the way
-  </p></h1>
-</section>
-
-<section class="slide" id="deque">
-  <h1><p>
-    <img src="vizperds/images/deque2.png">
-  </p></h1>
-</section>
-
-<section class="slide" id="deque-dll">
-  <h1><p>
-    <img src="vizperds/images/deque-dll.png">
-  </p></h1>
-</section>
-
-
-<section class="slide" id="pers">
-  <h1><p>
-    Persistence
-  </p></h1>
-</section>
-
-<section class="slide" id="codeit">
-  <h1><p>
-    Ok but how do we js it?
-  </p></h1>
-</section>
-
-<section class="slide" id="codeit">
-  <h1><p>
-    You promised us animations
-  </p></h1>
-</section>
-
-
-<section class="slide" id="ani1">
-  <h1><p>
-    <img src="vizperds/images/animated/249.gif.pagespeed.ce.8aonoEebke.gif">
-  </p></h1>
-</section>
-
-<section class="slide" id="ani2">
-  <h1><p>
-    <img src="vizperds/images/animated/doge-gif-blanket.gif">
-  </p></h1>
-</section>
-
-<section class="slide" id="ani2">
-  <h1><p>
-    <img src="vizperds/images/animated/Ceric2.gif">
-  </p></h1>
-</section>
-
-<section class="slide" id="ani2">
-  <h1><p>
-    <img src="vizperds/images/animated/Julia-Set_z2+c_ani.gif">
-  </p></h1>
-</section>
-
-<section class="slide" id="ani2">
-  <h1><p>
-    <img src="vizperds/images/animated/Dijkstra_Animation.gif">
-  </p></h1>
-</section>
-
-<section class="slide" id="ani2">
-  <h1><p>
-    In closing
-  </p></h1>
-</section>
-
-
-
-
-<section class="slide" id="gs-are-cg">
-  <h1><p>
-    DATA STRUCTURES <br />
-    <img src="vizperds/images/ds-cg.png"> <br />
-    THE GAME
-  </p></h1>
-</section>
-
-
-
-
+</section> -->
 
 
 
@@ -808,9 +709,10 @@
 
 
 
+<script src="jquery-1.7.2.min.js"></script>
 <!-- Grab CDN jQuery, with a protocol relative URL; fall back to local if offline -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="../jquery-1.7.2.min.js"><\/script>')</script>
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../jquery-1.7.2.min.js"><\/script>')</script> -->
 
 <!-- Deck Core and extensions -->
 <script src="core/deck.core.js"></script>
