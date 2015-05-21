@@ -15,7 +15,7 @@ UV.add_stepper( 'funviz'
               , { init: function() { i=0; return fun(i) }
                 , step: function(data) { return fun(i++) } } )
 
-scheduler.go('funviz')
+scheduler.go('funviz'); scheduler.stop()
 
 
 
