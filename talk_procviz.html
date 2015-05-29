@@ -50,7 +50,7 @@
 
 
 <section class="slide" id="p1">
-  <p><img src="procviz/images/photo1.JPG"></p>
+  <p><img src="procviz/images/intro.jpg"></p>
 </section>
 
 <section class="slide" id="q1">
@@ -62,34 +62,32 @@
 
 
 
-<section class="slide" id="b1">
+<!-- <section class="slide" id="b1">
   <p><img src="procviz/images/bbio2.jpg"></p>
-</section>
+</section> -->
 
-<section class="slide" id="b2">
+<!-- <section class="slide" id="b2">
   <p><img src="procviz/images/bbio3.jpg"></p>
-</section>
+</section> -->
 
 <section class="slide" id="b3">
   <p><img src="procviz/images/bbio4.jpg"></p>
 </section>
 
-<!-- <section class="slide" id="b4">
-  <p><img src="procviz/images/bbio1.jpg"></p>
-</section> -->
+
 
 
 
 <section class="slide" id="part1">
-  <p><img src="procviz/images/photo2.png"></p>
+  <p><img src="procviz/images/step_one.jpg"></p>
 </section>
 
 <section class="slide" id="hamt">
-  <p><img src="procviz/images/photo3.png"></p>
+  <p><img src="procviz/images/hamt.jpg"></p>
 </section>
 
 <section class="slide" id="underview">
-  <p><img src="procviz/images/photo4.png"></p>
+  <p><img src="procviz/images/underview.jpg"></p>
 </section>
 
 
@@ -100,10 +98,56 @@ Part 2: let's do that for a process
 ... well, granularity: lines of code vs whole program, step-through vs as you interact, and also, JS is a really big language. So part 2 is actually called: let's design a programming language!
  -->
 
-
-<section class="slide" id="part2">
-  <p><img src="procviz/images/photo5.png"></p>
+<section class="slide" id="granularity">
+  <p><img src="procviz/images/granularity.jpg"></p>
 </section>
+
+
+
+
+<section class="slide" id="step2">
+  <p><img src="procviz/images/step_two.jpg"></p>
+</section>
+
+<section class="slide" id="examples1">
+  <h1>
+    <p><img src="procviz/images/game_of_life.gif" width="640" height="378"></p>
+  </h1>
+</section>
+
+<section class="slide" id="examples2">
+  <h1>
+    <p><img src="procviz/images/minecraft_redstone.png"></p>
+  </h1>
+</section>
+
+<section class="slide" id="constraints">
+  <h1>
+    <p><img src="procviz/images/constraints.jpg"></p>
+  </h1>
+</section>
+
+
+
+<section class="slide" id="step3">
+  <p><img src="procviz/images/step_three.jpg"></p>
+</section>
+
+
+
+<section class="slide" id="finally">
+  <p><img src="procviz/images/deets.jpg"></p>
+</section>
+
+
+
+
+
+
+
+
+
+
 
 
     <!-- We want the machine to help us build our intuitions, not be forced to read through all the minutia to model it in our heads -->
@@ -115,29 +159,18 @@ Part 2: let's do that for a process
 <!-- TODO: sampling profilers -->
 <!-- TODO: research paper for program viz -->
 
-<section class="slide" id="examples1">
-  <h1>
-    <p><img src="images/game_of_life.gif" width="640" height="378"></p>
-  </h1>
-</section>
-
 <!-- <section class="slide" id="examples2">
   <h1>
     <p><img src="images/wireworld.gif" width="264" height="574"></p>
   </h1>
 </section> -->
 
-<section class="slide" id="examples3">
-  <h1>
-    <p><img src="images/minecraft_redstone.png"></p>
-  </h1>
-</section>
 
-<section class="slide" id="examples4">
+<!-- <section class="slide" id="examples4">
   <h1>
     <p><img src="images/visual6502_in_js.png"></p>
   </h1>
-</section>
+</section> -->
 
 <!-- What's the problem with these systems? They're really hard to program in. We'd much rather program in JS, but JS is a really big language -->
 
@@ -148,13 +181,13 @@ Part 2: let's do that for a process
      Most important thing to remember: no one will ever use your language
      (frees you from concerns about documentation, code clarity, marketing, etc, so you can focus on building something interesting and fun and cool. and then maybe if it's fun enough other people will like it and you can do all that other work then!)
      -->
+<!-- 
 
 <section class="slide" id="should2">
   <h1>
     <p>What should it do?</p>
     <p>Image editing</p>
     <p>Random programs</p>
-<!-- 
     
     small: 8bit machine, 256 bytes of addressable memory
     
@@ -162,6 +195,8 @@ Part 2: let's do that for a process
     
     Since we're going to show memory anyway, we may as well put something interesting in there; let's have it do image editing -->
 <!-- We don't want to know what the programs do ahead of time, so we'll make it capable of handling random programs: fuzz the compiler -->
+    
+    <!--
   </h1>
 </section>
 
@@ -177,11 +212,13 @@ Part 2: let's do that for a process
   </h1>
 </section>
 
+-->
+      
 <!-- TODO: tweet-sized interpreter -->
 
-<section class="slide" id="asdfasdf">
+<!-- <section class="slide" id="asdfasdf">
   <h1>
-    <p>CUT TO THE CODE</p>
+    <p>CUT TO THE CODE</p> -->
 <!-- then the one two sequence:
     show dict code
     show program, modify it
@@ -191,22 +228,22 @@ Part 2: let's do that for a process
      -->
     
 <!-- later: jsconf pegasus instead of smiley face -->
-  </h1>
+  <!-- </h1>
 </section>
 
 <section class="slide" id="ffff">
   <h1>
-    <p>HOMOICONIC</p>
+    <p>HOMOICONIC</p> -->
 <!-- we can compile the code we saw down to just numbers by mapping the operations to certain integer values, providing a certain kind of trivial homoiconicity... -->
-  </h1>
+  <!-- </h1>
 </section>
 
 <section class="slide" id="asd2">
   <h1>
-    <p>ISOMORPHISM</p>
+    <p>ISOMORPHISM</p> -->
 <!-- but now there's also an isomorphism from the code to the images themselves, so now our code and our memory and our IMAGES are all the same, yielding a much more interesting form of homoiconic behavior: the image (or icon) is a program! image manipulation is program manipulation! -->
-  </h1>
-</section>
+  <!-- </h1>
+</section> -->
 
 <!-- then the three sequence -->
 
@@ -225,7 +262,7 @@ Granularity is a really good transition from... something to something. 2 to 3?
 <!-- What if we could do it in JS??? -->
 
 
-<section class="slide" id="finally">
+<!-- <section class="slide" id="finally">
   <h1 style="font-size:1em;">
     <p>
       @dann
@@ -237,7 +274,7 @@ Granularity is a really good transition from... something to something. 2 to 3?
       dann @ bentobox . net
     </p>
   </h1>
-</section>
+</section> -->
 
 
 
